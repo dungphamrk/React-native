@@ -7,19 +7,19 @@ import type { StackParamList } from "../types/Navigation";
 
 const tabs = [
   {
-    key: "ex2/Home2",
+    key: "Bt2/Home",
     label: "Trang chủ",
     icon: "home-outline",
     iconActive: "home",
   },
   {
-    key: "ex2/Setting",
+    key: "Bt2/Setting",
     label: "Cài đặt",
     icon: "settings-outline",
     iconActive: "settings",
   },
   {
-    key: "ex2/Profile",
+    key: "Bt2/Profile",
     label: "Hồ sơ",
     icon: "person-outline",
     iconActive: "person",

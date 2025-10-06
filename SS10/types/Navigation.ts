@@ -1,16 +1,16 @@
 export type RootStackParamList = {
-  'ex1/Home': undefined;
-  'ex1/Detail': { id: number };
+  'Bt1/Home': undefined;
+  'Bt1/Detail': { id: number };
 };
 
 export type StackParamList = {
-  'ex2/Home2': undefined;
-  'ex2/Setting': undefined;
-  'ex2/Profile': undefined;
+  'Bt2/Home': undefined;
+  'Bt2/Setting': undefined;
+  'Bt2/Profile': undefined;
 };
 export type DrawerParamList = {
-  'ex3/Home3': undefined;
-  'ex3/Notifications': undefined;
+  'Bt3/Home': undefined;
+  'Bt3/Notifications': undefined;
 };
 export type FeedStackParamList = {
   FeedList: undefined;
