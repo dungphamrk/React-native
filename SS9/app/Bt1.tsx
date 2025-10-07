@@ -33,6 +33,8 @@ export default function Bt1() {
   useEffect(() => {
     AsyncStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
+
+
   const handleSave = (contact: Contact) => {
     if (editContact) {
       setContacts((prev) =>
@@ -48,6 +50,7 @@ export default function Bt1() {
   const handleDelete = (id: string) => {
     setContacts((prev) => prev.filter((c) => c.id !== id));
   };
+  
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
