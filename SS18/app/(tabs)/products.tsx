@@ -65,10 +65,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
   return (
     <View style={styles.card}>
       <Image
-        source={{ uri: item.image }}
-        style={styles.image}
-        resizeMode="contain"
-      />
+  source={{ uri: item.images?.[0]?.url }}
+  style={styles.image}
+  resizeMode="contain"
+/>
       <Text
         onPress={() =>
           router.push({
@@ -79,7 +79,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
         style={styles.title}
         numberOfLines={2}
       >
-        {item.name}
+        {item.productName}
       </Text>
       <Text style={styles.price}>{item.price.toLocaleString("vi-VN")} VNĐ</Text>
       <TouchableOpacity
@@ -90,7 +90,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
         <Text style={styles.addButtonText}>Thêm vào giỏ</Text>
       </TouchableOpacity>
     </View>
-  );
+  );  
 };
 
 export default function ProductsScreen() {
@@ -98,11 +98,13 @@ export default function ProductsScreen() {
     queryKey: ["products"],
     queryFn: fetchAllProducts,
   });
+  console.log(data.data);
+  
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ title: "Cửa hàng" }} />
       <FlatList
-        data={data}
+        data={data.data}
         renderItem={({ item }) => <ProductCard item={item} />}
         keyExtractor={(item) => item.id}
         numColumns={2}

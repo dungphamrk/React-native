@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     const accessToken =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExMSwicm9sZSI6IlF14bqjbiBsw70iLCJzdGF0dXMiOiJBQ1RJVkUiLCJkZXZpY2VJZCI6IjFmMDI1ZTk0LTM0YTAtNmVlMC05ZWE4LTMwYmIyMDQyMzJjZiIsImlhdCI6MTc2MDUxNzE2MSwiZXhwIjoxNzYwNTE4MDYxfQ.CtQN0YHOjFvlu3kHXK0Pvqy8ceBWk2MyUHav93w_ar8";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJyb2xlIjoiS2jDoWNoIGjDoG5nIiwic3RhdHVzIjoiQUNUSVZFIiwiZGV2aWNlSWQiOiIxZjAyNWU5NC0zNGEwLTZlZTAtOWVhOC0zMGJiMjA0MjMyY2YiLCJpYXQiOjE3NjA2ODQ3MDQsImV4cCI6MTc2MDY4NjUwNH0.SzaEciPMbMlYv2HiTq450N35rPxjOJlvh51tQwhCVMw";
     if (accessToken) {
       config.headers["Authorization"] = `Bearer ${accessToken}`;
     }
