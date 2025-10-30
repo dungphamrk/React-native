@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: 70,
     height: 70,
-    borderRadius: 35,
+    borderRadius: 35, 
   },
   profileInfo: {
     flex: 1,

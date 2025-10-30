@@ -103,7 +103,7 @@ export default function ProductsScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ title: "Cửa hàng" }} />
-      <FlatList
+      <FlatList 
         data={data.data}
         renderItem={({ item }) => <ProductCard item={item} />}
         keyExtractor={(item) => item.id}
